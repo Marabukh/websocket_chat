@@ -16,3 +16,8 @@ Thumbs.db
 *.pem
 *.key
 .npmrc
+.codex/
+.agents/
+AGENTS.md
+.aws/
+.cache/

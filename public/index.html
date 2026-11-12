@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Общий чат</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/client.js" defer></script>
+</head>
+<body>
+  <main>
+    <header><div><p class="eyebrow">НА СВЯЗИ</p><h1>Общий чат</h1></div><span id="status" role="status" data-state="offline">Отключено</span></header>
+    <p class="intro">Место для разговора в реальном времени.</p>
+    <form id="login">
+      <label for="name">Ваше имя</label>
+      <div class="row"><input id="name" maxlength="30" required autocomplete="nickname" placeholder="Как вас зовут?"><button id="connect">Подключиться</button></div>
+    </form>
+    <div class="toolbar"><span>Участников: <strong id="count">—</strong></span><div><button id="reconnect" type="button" hidden>Подключиться снова</button><button id="disconnect" type="button" disabled>Отключиться</button></div></div>
+    <p id="notice" role="alert"></p>
+    <section id="messages" role="log" aria-label="Сообщения чата" aria-live="polite"><p id="empty">Здесь появятся сообщения. Войдите, чтобы начать разговор.</p></section>
+    <form id="composer"><label for="text">Сообщение</label><div class="row"><input id="text" maxlength="1000" placeholder="Напишите сообщение…" disabled required autocomplete="off"><button id="send" disabled>Отправить</button></div></form>
+    <details><summary>События WebSocket <span>· последние 100</span></summary><ol id="events" aria-label="Журнал событий"></ol></details>
+  </main>
+</body>
+</html>
